@@ -56,7 +56,7 @@ export const login = async (req: Request, res: Response): Promise<void> => {
             return;
         };
 
-        const isPassCorrect = bcrypt.compare(password, existingUser.password);
+        const isPassCorrect = await bcrypt.compare(password, existingUser.password);
 
         if (!isPassCorrect) {
             res.status(400).json({
@@ -66,8 +66,10 @@ export const login = async (req: Request, res: Response): Promise<void> => {
         };
 
         const Payload = {
-            role: existingUser.role,
-            userId: existingUser._id
+            user: {
+                role: existingUser.role,
+                userId: existingUser._id
+            }
         };
 
         const token = jwt.sign(Payload, JWT_SECRET, {

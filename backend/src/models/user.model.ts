@@ -7,7 +7,6 @@ interface UserInterface extends Document {
     phone: string;
     role: "admin" | "user" | "farmer" | "logistics";
     address: {
-        village?: string;
         city?: string;
         state?: string;
         pincode?: number;
@@ -38,7 +37,6 @@ const userSchema = new Schema<UserInterface>({
         default: "user"
     },
     address: {
-        village: { type: String },
         city: { type: String },
         state: { type: String },
         pincode: { type: Number }
