@@ -39,7 +39,6 @@ src/
   - `buyer`
   - `logistics`
   - `admin`
-  - `cooperativeAdmin`
 
 ---
 
@@ -52,9 +51,7 @@ src/
 | `Order`      | Orders placed by buyers for produce                  |
 | `Logistics`  | Vehicles and delivery service providers              |
 | `Equipment`  | Leasable farming tools tracked per cooperative       |
-|--------------|-------------------------------------------------------|
-| Future Modles to be added                                            |
-|--------------|-------------------------------------------------------|
+| Future Models to be added                                            |
 | `Loan`       | Individual or group loans for farmers/coops          |
 | `SeedProduct`| Seeds, fertilizers, tools sold on marketplace        |
 | `Review`     | Ratings and reviews for logistics & sellers          |
@@ -73,10 +70,10 @@ src/
 | `product.controller.ts` | Create, update, fetch yields                   |
 | `order.controller.ts` | Buyer placing orders, order tracking             |
 | `logistics.controller.ts` | Assign & track delivery status              |
-| `cooperative.controller.ts` | Manage members, purchases, equipment      |
 | `equipment.controller.ts` | Book/return tools                            |
 | `admin.controller.ts` | System analytics, user mgmt                     |
 | `review.controller.ts` | Post/retrieve reviews                          |
+| Future Scope: Controllers to be added                                   |
 | `transaction.controller.ts` | Payment logging & wallet transactions    |
 | `forecast.controller.ts` | AI integration endpoints                     |
 
@@ -107,6 +104,12 @@ src/
 | `GET`  | `/api/admin/stats`   | Admin dashboard metrics |
 
 ## 🔮 AI/ML Integrations (Planned/Optional)
- - 📈 Forecasting Models: Predict crop demand & price
- - 🎯 Yield Analysis: ML on image uploads to rate quality
- - 📦 Route Optimization: Smart logistics for faster delivery
+ - *Forecasting Models*: Predict crop demand & price
+ - *Yield Analysis*: ML on image uploads to rate quality
+ - *Route Optimization*: Smart logistics for faster delivery
+
+---
+
+## Maintainer
+
+[@avidhanorkar](https://github.com/avidhanorkar) 
